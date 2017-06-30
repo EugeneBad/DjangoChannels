@@ -1,0 +1,50 @@
+#login_box{
+    height:84vh;
+    font-family:Helvetica;
+    color:#fff;
+    background:rgba(0,0,0,0.33);
+    padding:0px;
+    margin-top: 7vh;
+}
+
+#login_box h1{
+    text-align:center;
+    margin-top:7vh;
+    margin-bottom:10vh;
+    font-size:34px;
+    font-weight: bold;
+}
+
+#login_box input{
+
+    display:block;
+    width:96%;
+    padding-left:10%;
+    margin-left:2%;
+    margin-top:8vh;
+    background:rgba(0,0,0,0.4);
+    color:#fff;
+    border:0;
+    height:10vh;
+}
+
+
+#login_box button{
+    display:block;
+    background:#742ECC;
+    color:#fff;
+    border:0;
+    font-size:20px;
+    margin-top:8vh;
+    margin-left:2%;
+    border-radius: 0px;
+    width:96%;
+    height:10vh;
+    text-align:center;
+    margin-bottom:3vh;
+}
+
+p{
+    text-align: center;
+    font-size:3vh;
+}

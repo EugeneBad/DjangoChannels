@@ -1,0 +1,79 @@
+#chat_box{
+    height:78vh;
+    font-family:Helvetica;
+    background:rgba(39,190,119,0.27);
+    margin-top: 2vh;
+    overflow: auto;
+    padding-top:0px;
+
+}
+
+#input_box{
+    height:8vh;
+    font-family:Helvetica;
+    margin-top: 4vh;
+    padding:0px;
+}
+
+#input{
+    height:8vh;
+    width:64.6%;
+    background:rgba(108,143,201,0.47);
+    border:0;
+    color:#fff;
+    margin-left:0px;
+    padding-left:2%;
+    margin-right:-3px;
+}
+
+#toss_btn{
+    height:8vh;
+    width:35%;
+    margin: 0px;
+    border-bottom-width:thin;
+    border-top-width:0px;
+    border-right-width:0px;
+    border-left-width:0px;
+    border-color:red;
+    color:rgb(255,255,255);
+    background:rgba(22,0,0,0.53);
+    border-radius:0px;
+}
+
+#sender{
+    background:#fff;
+    margin-top:1vh;
+    overflow:visible;
+    padding-left:1%;
+    padding-left:1%;
+    padding-top:1%;
+    padding-bottom:1%;
+    font-size:2.1vh;
+}
+
+#received{
+    background:#fff;
+    margin-top:1vh;
+    overflow:visible;
+    padding-left:1%;
+    padding-left:1%;
+    padding-top:1%;
+    padding-bottom:1%;
+    font-size:2.1vh;
+
+}
+
+#logout_btn{
+    background:rgba(102,100,10,0.13);
+    margin-top:1vh;
+    height:5vh;
+    width:17%;
+    border-bottom-width:thin;
+    border-top-width:0px;
+    border-right-width:0px;
+    border-left-width:0px;
+    border-color:red;
+    color:rgb(239,221,119);
+    font-size:2.1vh;
+    border-radius:5px;
+}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Welcome{% endblock %}
+{% block extra_styles %}
+{% load static %}
+<link type="text/css" rel="stylesheet" href="{% static 'css/login_style.css' %}">
+
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div id="login_box" class="col-md-4 col-md-push-4 col-xs-10 col-xs-push-1">
+        <h1>Login</h1>
+        <form method="Post" action="{% url 'login_url' %}">
+            {% csrf_token %}
+            {% if not form.username.value %}
+            <input type="text" name="username" placeholder="Username"/>
+            {% elif form.username.value %}
+            <input type="text" name="username" placeholder="Username" value="{{ form.username.value }}"/>
+            {% endif %}
+
+            <input type="password" name="password" placeholder="Password"/>
+            <button class="btn" type="submit">Login</button>
+            {% if form.username.errors or form.username.errors or form.username.value %}
+            <p>Please Enter Correct Information.<br> Thank You!</p>
+            {% endif %}
+        </form>
+    </div>
+</div>
+
+{% endblock %}

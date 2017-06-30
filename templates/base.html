@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %} Base {% endblock %}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css\bootstrap.css' %}" type="text/css">
+
+    <script src="{% static 'js\jquery.min.js' %}"></script>
+    <script src="{% static 'js\bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js\csrf.js' %}"></script>
+
+    <style type="text/css">
+        body{background-attachment: fixed;
+             background-size: 100% 100%;
+             background-repeat: no-repeat;}
+    </style>
+    {% block extra_styles %}{% endblock %}
+</head>
+
+<body background="{% static 'images/background.jpg' %}">
+    <div class="container-fluid">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+
+</body>
+</html>

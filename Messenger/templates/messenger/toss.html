@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}Toss{% endblock %}
+{% block extra_styles %}
+{% load static %}
+
+<link type="text/css" rel="stylesheet" href="{% static 'css/toss_style.css' %}">
+<script src="{% static 'js\sender.js' %}"></script>
+<script src="{% static 'js\sockets.js' %}"></script>
+{% endblock %}
+{% block content %}
+<div class="row">
+    <div id="chat_box" class="col-md-6 col-md-push-3 col-xs-12">
+        {% for toss in toss %}
+
+        {% if toss.sender.user == request.user %}
+        <div id="sender" style="width:{{ toss.wide }}%">{{ toss.toss }}</div>
+        {% endif %}
+
+        {% if toss.receiver.user == request.user %}
+        <div id="received" style="width:{{ toss.wide }}%; margin-left:{{ toss.margin_shift }}">{{ toss.toss }}</div>
+        {% endif %}
+
+        {% endfor %}
+    </div>
+</div>
+
+<div class="row">
+    <div id="input_box" class="col-md-6 col-md-push-3 col-xs-12">
+        {% csrf_token %}
+        <input id="input" type="text" placeholder="{{ request.user.get_username }}">
+        <button class="btn" id="toss_btn">Toss</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12" style=" text-align:center;">
+        <input id="receiver" type="text" placeholder="To">
+        <a href="{% url 'logout_url' %}"> <input id="logout_btn" type="button" value="Log Out" ></a>
+    </div>
+
+</div>
+
+{% endblock %}

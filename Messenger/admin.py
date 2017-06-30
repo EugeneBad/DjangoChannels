@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Chatter, Toss
 
-# Register your models here.
+admin.site.register(Chatter)
+admin.site.register(Toss)
+
+
